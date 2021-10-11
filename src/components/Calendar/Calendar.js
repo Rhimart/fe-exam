@@ -3,7 +3,9 @@ import UpdateCalendar from './UpdateCalendar';
 
 const Calendar = (props) => {
    async function removeCalendarHandler(id) {
-        const response = await fetch('http://localhost:3000/calendars/'+id, {
+    const answer = window.confirm("are you sure?");
+    if (answer) {
+      const response = await fetch('http://localhost:3000/calendars/'+id, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json'
@@ -12,9 +14,13 @@ const Calendar = (props) => {
         const data = await response.json();
         console.log(data);
         props.update();
+    }
+        
       }
     async function updateCalendarHandler(calendar) {
-      const response = await fetch('http://localhost:3000/calendars/'+props.id, {
+      const answer = window.confirm("are you sure?");
+      if (answer) {
+        const response = await fetch('http://localhost:3000/calendars/'+props.id, {
         method: 'PUT',
         body: JSON.stringify(calendar),
         headers: {
@@ -24,6 +30,8 @@ const Calendar = (props) => {
       const data = await response.json();
       console.log(data);
       props.update();
+      }
+      
     }
     function formatDate(string){
       var options = { year: 'numeric', month: 'long', day: 'numeric' };

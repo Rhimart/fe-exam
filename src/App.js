@@ -5,9 +5,11 @@ import React, {useState, useEffect, useCallback} from 'react';
 
 import AddCalendar from './components/Calendar/AddCalendar';
 function App() {
+  
   const [calendars, setCalendars] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+
   const fetchCalendarsHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -16,7 +18,6 @@ function App() {
       if (!response.ok) {
         throw new Error('Something went wrong!');
       }
-
       const data = await response.json();
       setCalendars(data);
     } catch (error) {
