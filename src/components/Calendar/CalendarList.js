@@ -1,8 +1,8 @@
-import { useState, useSelector } from 'react';
+import { useState } from 'react';
+import {useSelector} from 'react-redux'
 import Calendar from './Calendar';
 
 const CalendarList = (props) => {
-  // const calendarItems = useSelector((state) => state.calendar.items);
 
   const [searchTerm, setSearchTerm] = useState("");
   const [statusSearchTerm, setStatusSearchTerm] = useState("");
