@@ -1,46 +1,11 @@
 {
   "calendars": [
     {
-      "title": "gfhgfhfgh",
+      "title": "Testing",
       "status": "pending",
       "date": "2021-10-15",
-      "description": "asdasdasdasdasdasd",
-      "id": 15
-    },
-    {
-      "title": "aaaa",
-      "status": "on-going",
-      "date": "2021-10-15",
-      "description": "sdasdasda",
-      "id": 16
-    },
-    {
-      "title": "asdadsasdasd",
-      "status": "pending",
-      "date": "2021-10-20",
-      "description": "a.sdmasdkljasd",
-      "id": 17
-    },
-    {
-      "title": "Somethingxx",
-      "status": "pending",
-      "date": "2021-10-15",
-      "description": "TEsting asdfasdfadsfasdf",
-      "id": 18
-    },
-    {
-      "title": "asdasd",
-      "status": "on-going",
-      "date": "2021-10-08",
-      "description": "asdasdasdasdasd",
-      "id": 19
-    },
-    {
-      "title": "asdasd",
-      "status": "on-going",
-      "date": "2021-10-14",
-      "description": "asdasdasdas",
-      "id": 20
+      "description": "Testing",
+      "id": 1
     }
   ]
 }

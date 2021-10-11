@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {useSelector} from 'react-redux'
 import Calendar from './Calendar';
 
@@ -8,8 +8,7 @@ const CalendarList = (props) => {
   const [statusSearchTerm, setStatusSearchTerm] = useState("");
     console.log(props);
     return (
-        <section className="container">
-          <h2>List of appointments</h2>
+          <React.Fragment>
           <div className="container pb-2">
             <div className="row">
               <div className="col">
@@ -62,7 +61,7 @@ const CalendarList = (props) => {
             ))}
           </div>
           </div>
-        </section>
+          </React.Fragment>
       );
 }
 export default CalendarList;

@@ -51,7 +51,8 @@ function App() {
             <section>
               <AddCalendar onAddCalendar={addCalendarHandler} />
             </section>
-            <section>
+            <section className="container">
+            <h2>List of appointments</h2>
               {!isLoading && calendars.length > 0 &&<CalendarList calendars={calendars} onUpdate={fetchCalendarsHandler}/>}
               {isLoading && <p>Loading...</p>}
               {!isLoading && calendars.length ===   0 && <p>No calendars</p>}
