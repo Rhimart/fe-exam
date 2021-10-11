@@ -7,10 +7,18 @@ function AddCalendar(props) {
   const statusRef = useRef('');
   const tdateRef = useRef('');
   const descriptionRef = useRef('');
+  function isEmptyOrSpaces(str){
+    return str === null || str.match(/^ *$/) !== null;
+}
   function submitHandler(event) {
     event.preventDefault();
 
-    // could add validation here...
+    if(isEmptyOrSpaces(titleRef.current.value)
+      ||isEmptyOrSpaces(statusRef.current.value)
+      ||isEmptyOrSpaces(tdateRef.current.value)
+      ||isEmptyOrSpaces(descriptionRef.current.value)){
+        alert('Please fillout needed data');
+    }else{
 
     const calendar = {
       title: titleRef.current.value,
@@ -25,6 +33,7 @@ function AddCalendar(props) {
     tdateRef.current.value='';
     descriptionRef.current.value='';
     document.getElementById("modal-trigger").click();
+  }
   }
 
   return (

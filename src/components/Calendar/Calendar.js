@@ -3,7 +3,7 @@ import UpdateCalendar from './UpdateCalendar';
 
 const Calendar = (props) => {
    async function removeCalendarHandler(id) {
-    const answer = window.confirm("are you sure?");
+    const answer = window.confirm("Are you sure you want to delete this record?");
     if (answer) {
       const response = await fetch('http://localhost:3000/calendars/'+id, {
           method: 'DELETE',
@@ -18,7 +18,7 @@ const Calendar = (props) => {
         
       }
     async function updateCalendarHandler(calendar) {
-      const answer = window.confirm("are you sure?");
+      const answer = window.confirm("Save Changes?");
       if (answer) {
         const response = await fetch('http://localhost:3000/calendars/'+props.id, {
         method: 'PUT',
